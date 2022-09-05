@@ -1,18 +1,18 @@
 <section class="container">
-  <h2 class="titulo">Transfers</h2>
-  <table class="tabela">
-    <thead class="tabela__cabecalho">
-      <th class="tabela__cabecalho__conteudo">Date</th>
-      <th class="tabela__cabecalho__conteudo">Value</th>
-      <th class="tabela__cabecalho__conteudo">Destination Account</th>
+  <h2 class="title">Transfers</h2>
+  <table class="table">
+    <thead class="table__header">
+      <th class="table__header__content">Date</th>
+      <th class="table__header__content">Value</th>
+      <th class="table__header__content">Destination Account</th>
     </thead>
     <tbody *ngIf="transfers?.length > 0; else emptyList">
-      <tr class="tabela__linha" *ngFor="let t of transfers">
-        <td class="tabela__conteudo">
+      <tr class="table__line" *ngFor="let t of transfers">
+        <td class="table__content">
           {{ t.date | date: "short" }}
         </td>
-        <td class="tabela__conteudo">{{ t.value | currency }}</td>
-        <td class="tabela__conteudo">{{ t.destination_account }}</td>
+        <td class="table__content">{{ t.value | currency }}</td>
+        <td class="table__content">{{ t.destination_account }}</td>
       </tr>
     </tbody>
   </table>

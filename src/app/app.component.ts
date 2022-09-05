@@ -7,13 +7,6 @@ import { TransferService } from './services/transferService.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-bank-lucassneiva';
-  transfersList: any[] = [];
+  title = 'lubank';
 
-  constructor(private service: TransferService) {}
-
-  handleTransfer($event) {
-    console.log($event);
-    this.service.createNewTransfer($event);
-  }
 }

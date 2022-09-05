@@ -1,4 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { TransferService } from '../services/transferService.service';
+import { Transfer } from 'model/transfer.model';
 
 @Component({
   selector: 'app-new-transfer',
@@ -6,20 +8,29 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./new-transfer.component.scss'],
 })
 export class NewTransferComponent {
-  @Output() onTransfer = new EventEmitter<any>();
+  value: string;
+  destination_account: string;
+  transfersList: any[] = [];
 
-  valor: string;
-  destino: string;
+  constructor(private service: TransferService) {}
 
   sendTransfer() {
     console.log('New transfer pending');
-    const obj = { valor: this.valor, destino: this.destino };
-    this.onTransfer.emit(obj);
-    this.cleanForm();
+    const obj: Transfer = {
+      value: this.value,
+      destination_account: this.destination_account,
+    };
+    this.service.createNewTransfer(obj).subscribe(
+      (res) => {
+        console.log(res);
+        this.cleanForm();
+      },
+      (err) => console.log(err)
+    );
   }
 
-  cleanForm(){
-    this.valor = '';
-    this.destino = '';
+  cleanForm() {
+    this.value = '';
+    this.destination_account = '';
   }
 }
