@@ -2,12 +2,12 @@
   background-color: white;
   padding: 16px;
   margin: 0 auto;
-  max-width: 400px;;
+  max-width: 400px;
   border-radius: 4px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   position: relative;
-  top: 180px;
-  &__titulo {
+  top: 150px;
+  &__title {
     text-transform: capitalize;
     color: green;
   }
@@ -61,7 +61,7 @@
   cursor: pointer;
   transition: opacity 0.2s;
 
-  &--cancelar {
+  &--cancel {
     background-color: blue;
     margin-left: 20px;
   }
