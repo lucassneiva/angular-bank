@@ -1,1 +1,22 @@
-<router-outlet></router-outlet>
+<header>
+  <section class="logo">
+    <img src="./assets/img/bankIcon.png"/>
+    <h1>Lubank</h1>
+  </section>
+  <nav>
+    <a routerLink="transfers" >Transfers</a>
+    <a routerLink="make-transfer" routerLinkActive="active">New transfer</a>
+  </nav>
+</header>
+<main>
+  <router-outlet></router-outlet>
+</main>
+<footer>
+  <a href="https://www.linkedin.com/in/lucassneiva" target="_blank">
+    <img src="./assets/img/linkedin.png"/>
+  </a>
+  <a href="https://www.github.com/lucassneiva" target="_blank">
+    <img src="./assets/img/github.png"/>
+  </a>
+  <p>Lucas Neiva</p>
+</footer>

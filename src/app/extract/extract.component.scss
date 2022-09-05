@@ -6,17 +6,13 @@
   border-radius: 4px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   position: relative;
-  top: 100px;
   &__title {
     text-transform: capitalize;
+    font-size: 24px;
+    margin-bottom: 16px;
+    color: black;
+    padding: 0 15px;
   }
-
-}
-
-.title {
-  text-align: center;
-  font-size: 24px;
-  margin-bottom: 16px;
 }
 
 .table {
@@ -30,7 +26,7 @@
 
     &__content {
       padding: 10px;
-      border-bottom: 2px solid green;
+      border-bottom: 2px solid black;
     }
   }
 
@@ -53,7 +49,7 @@
 
 .button {
   margin-top: 30px;
-  background-color: green;
+  background-color: black;
   color: white;
   display: block;
   text-align: center;
